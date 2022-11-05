@@ -1,0 +1,198 @@
+
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    width:500px;
+    background-color: var(--bg);
+}
+
+#main {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#parent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+    user-select: none;
+}
+
+canvas {
+    background-color: none;
+    border-radius: 0rem;
+    height: 0px;
+    z-index: -5;
+    user-select: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.column {
+    margin-top: 10px;
+}
+
+.draggable {
+    position: absolute;
+    left: 40vw;
+    top: 40vh;
+    width: 8rem;
+    outline: 0.1rem solid var(--fg);
+    padding: 5px;
+    user-select: none;
+}
+
+.draggable-text-box {
+    width: fit-content;
+    outline: none;
+    user-select:all;
+
+}
+
+input {
+    font-family: 'IBM Plex Mono', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+
+.text-box {
+    position: relative;
+    left: -1rem;
+    float: left;
+    width: fit-content;
+    border: none;
+    border-bottom: 0.1rem solid var(--fg);
+}
+
+.arrows {
+    width: 2.2rem;
+    height: 2.2rem;
+    rotate: 45deg;
+}
+
+.arrow {
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    border-color: var(--fg);
+    border-style: solid;
+    border-width: .1rem;
+}
+
+.arrow-down {
+    bottom: 0; 
+    right: 0; 
+    border-left-width: 0;
+    border-top-width: 0;
+}
+
+.arrow-right {
+    top: 0; 
+    right: 0; 
+    border-left-width: 0;
+    border-bottom-width: 0;
+}
+
+.arrow-up {
+    top: 0; 
+    left: 0; 
+    border-right-width: 0; 
+    border-bottom-width: 0;
+}
+
+.arrow-left {
+    bottom: 0; 
+    left: 0; 
+    border-right-width: 0; 
+    border-top-width: 0;
+}
+
+.arrows:focus .arrow, .arrows:hover .arrow {
+    border-color: var(--highlight);
+}
+
+.arrows-mask {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(15%, 5%, 68%);
+    rotate: -45deg;
+}
+
+.arrows-box {
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    position: relative;
+    top: 0rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.arrows-box-text-box {
+    width: 8rem;
+    height: 100%;
+    float: left;
+}
+
+
+
+.button-row {
+    width: 100%;
+    padding: .2rem;
+    padding-top: 0;
+    padding-bottom: .4rem;
+}
+
+.button-column {
+    width: 48%;
+    margin: 0;
+    float: left;
+}
+
+.button-spacer {
+    width: 4%;
+    height: 3.8rem;
+    float: left;
+}
+
+.rotate-1x {
+    rotate: 90deg;
+}
+
+.rotate-2x {
+    rotate: 180deg;
+}
+
+.rotate-3x {
+    rotate: 270deg;
+}
